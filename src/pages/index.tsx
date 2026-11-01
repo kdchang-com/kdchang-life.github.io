@@ -4,6 +4,17 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import {
+  Bookmark,
+  BookOpen,
+  Briefcase,
+  Clapperboard,
+  ExternalLink,
+  Library,
+  Mail,
+  Stamp,
+  type LucideIcon,
+} from "lucide-react";
 
 import styles from "./index.module.css";
 
@@ -18,7 +29,7 @@ const stats = [
 ];
 
 type FeaturedProduct = {
-  emoji: string;
+  icon: LucideIcon;
   image?: string;
   title: string;
   desc: string;
@@ -28,7 +39,7 @@ type FeaturedProduct = {
 
 const featuredProducts: FeaturedProduct[] = [
   {
-    emoji: "📚",
+    icon: BookOpen,
     image: "/img/projects/lifepicksbookstore.webp",
     title: "LifePicks 人生推書店",
     desc: "專為在人生路上感到徬徨、迷惘或卡關的你打造的虛擬獨立書店。無論你正探索自我、追求成長，這裡都有一本書在等著你。",
@@ -36,7 +47,7 @@ const featuredProducts: FeaturedProduct[] = [
     url: "https://www.lifepicksbookstore.com/",
   },
   {
-    emoji: "🧪",
+    icon: Bookmark,
     image: "/img/projects/careertags.webp",
     title: "CareerTags 職涯書籤",
     desc: "瀏覽器擴充功能，幫助使用者一鍵收藏跨平台職缺和學習資源，系統化管理求職進度及職涯成長。",
@@ -44,7 +55,7 @@ const featuredProducts: FeaturedProduct[] = [
     url: "https://www.careertags.com/",
   },
   {
-    emoji: "🧭",
+    icon: Stamp,
     image: "/img/projects/explorestamp.webp",
     title: "ExploreStamp 探索印記",
     desc: "隨身的虛擬集章手冊。到博物館、古蹟、老車站、市集與夜市現場打卡，收集印章、記錄照片，並把旅程做成明信片分享。",
@@ -52,7 +63,7 @@ const featuredProducts: FeaturedProduct[] = [
     url: "https://www.explorestamp.com/",
   },
   // {
-  //   emoji: "🧪",
+  //   icon: GraduationCap,
   //   image: "/img/projects/certgym.webp",
   //   title: "CertGym 證照道館",
   //   desc: "CertGym 是一個專為考取各類專業證照學習者設計的行動應用。透過閃卡、題庫、錯題收藏，讓備考變得有趣又高效。",
@@ -101,17 +112,17 @@ const featuredArticles: Article[] = [
 
 const categories = [
   {
-    icon: "📖",
+    icon: Library,
     title: "閱讀筆記 / 人生反思",
     desc: "精選職場、心理勵志、商業管理等好書重點摘要與深度解析，幫助你發現人生意義",
   },
   {
-    icon: "💼",
+    icon: Briefcase,
     title: "職涯發展 / 個人成長",
     desc: "從職場新鮮人到資深工作者的成長學習軌跡，探討技能提升、領導力與職場軟實力",
   },
   {
-    icon: "🎬",
+    icon: Clapperboard,
     title: "電影心得 / 旅行遊記",
     desc: "透過電影鏡頭觀察人性，從旅行見聞分享不同文化視角下的人生智慧與成長體悟",
   },
@@ -208,7 +219,9 @@ function FeaturedProductsSection() {
                   className={styles.productImage}
                 />
               ) : (
-                <div className={styles.productImagePlaceholder}>{p.emoji}</div>
+                <div className={styles.productImagePlaceholder}>
+                  <p.icon size={48} strokeWidth={1.5} aria-hidden />
+                </div>
               )}
               <div className={styles.productBody}>
                 <div className={styles.productTags}>
@@ -220,7 +233,9 @@ function FeaturedProductsSection() {
                 </div>
                 <h3 className={styles.productTitle}>{p.title}</h3>
                 <p className={styles.productDesc}>{p.desc}</p>
-                <span className={styles.productBtn}>🔗 前往網站</span>
+                <span className={styles.productBtn}>
+                  <ExternalLink size={15} aria-hidden /> 前往網站
+                </span>
               </div>
             </a>
           ))}
@@ -242,7 +257,7 @@ function ContentCategoriesSection() {
         <div className={styles.categoriesGrid}>
           {categories.map((c) => (
             <div key={c.title} className={styles.categoryCard}>
-              <span className={styles.categoryIcon}>{c.icon}</span>
+              <c.icon className={styles.categoryIcon} size={44} strokeWidth={1.5} aria-hidden />
               <h3 className={styles.categoryTitle}>{c.title}</h3>
               <p className={styles.categoryDesc}>{c.desc}</p>
             </div>
@@ -292,7 +307,7 @@ function NewsletterSection() {
   return (
     <section className="newsletterSection">
       <div className="newsletterCard">
-        <span className="newsletterIcon">✉️</span>
+        <Mail className="newsletterIcon" size={40} strokeWidth={1.5} aria-hidden />
         <h2 className="newsletterTitle">訂閱 KD Chang 的電子報</h2>
         <p className="newsletterDesc">
           加入超過 1,000 位讀者的個人成長學習社群：每週一封信成為更好的自己

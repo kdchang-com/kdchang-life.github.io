@@ -156,7 +156,8 @@
 }
 
 .sectionIcon {
-  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: var(--ifm-color-primary);
 }
 
 .sectionTitle {
@@ -229,7 +230,7 @@
 }
 
 .highlightEmoji {
-  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
   flex-shrink: 0;
   margin-top: 0.1rem;
 }

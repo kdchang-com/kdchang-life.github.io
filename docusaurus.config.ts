@@ -1,6 +1,11 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+
+const SUPPORT_URL = "https://portaly.cc/kdchang.labs/support";
+const COFFEE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>';
+const supportButton = (className: string) =>
+  `<a class="${className}" href="${SUPPORT_URL}" target="_blank" rel="noopener noreferrer">${COFFEE_ICON}<span>贊助我喝杯咖啡</span></a>`;
 import * as fs from "fs";
 import * as path from "path";
 
@@ -212,6 +217,11 @@ const config: Config = {
         { to: "blog", label: "最新文章", position: "left" },
         { to: "/projects", label: "產品專案", position: "left" },
         { to: "/about", label: "關於本站", position: "left" },
+        {
+          type: "html",
+          position: "right",
+          value: supportButton("support-btn support-btn--nav"),
+        },
         // {`
         //   type: "docSidebar",
         //   sidebarId: "tutorialSidebar",
@@ -265,10 +275,13 @@ const config: Config = {
               label: "Contact Us",
               to: "mailto:kdchang.com@gmail.com",
             },
+            {
+              html: supportButton("support-btn support-btn--footer"),
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} KD Chang 張凱迪. Built with ❤️ by <a href="https://www.kdchang.com">KD Chang</a> in Taiwan.`,
+      copyright: `Copyright © ${new Date().getFullYear()} KD Chang 張凱迪. Built with <svg class="footer-heart" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="love"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg> by <a href="https://www.kdchang.com">KD Chang</a> in Taiwan.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -106,8 +106,8 @@
 }
 
 .sectionEmoji {
-  font-size: 1.7rem;
-  line-height: 1;
+  flex-shrink: 0;
+  color: var(--ifm-color-primary);
 }
 
 .sectionTitle {

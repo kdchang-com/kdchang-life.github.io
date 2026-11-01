@@ -1,5 +1,18 @@
 import type { ReactNode } from "react";
 import Layout from "@theme/Layout";
+import {
+  Bot,
+  Briefcase,
+  Globe,
+  GraduationCap,
+  Laptop,
+  Library,
+  Send,
+  Sparkles,
+  Star,
+  User,
+  Wrench,
+} from "lucide-react";
 import styles from "./about.module.css";
 
 const experiences = [
@@ -50,27 +63,27 @@ const education = [
 
 const highlights = [
   {
-    emoji: "💻",
+    icon: Laptop,
     text: "Interdisciplinary background in Computer Science and Social Science",
   },
   {
-    emoji: "⭐",
+    icon: Star,
     text: "Open source contributor — 4,000+ GitHub stars",
   },
   {
-    emoji: "📚",
+    icon: Library,
     text: "Technical writer, educator, and hackathon organizer",
   },
   {
-    emoji: "🎓",
+    icon: GraduationCap,
     text: "Mentor to 3,000+ students learning to code",
   },
   {
-    emoji: "🤖",
+    icon: Bot,
     text: "Pepper Robotics App Challenge — First Prize Winner (5-person team lead)",
   },
   {
-    emoji: "🌐",
+    icon: Globe,
     text: "Experienced in Web, IoT, and AI/Robotics innovative applications",
   },
 ];
@@ -191,7 +204,7 @@ export default function About(): ReactNode {
         {/* Bio */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>👤</span>
+            <User className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>About</h2>
           </div>
           <hr className={styles.divider} />
@@ -258,14 +271,14 @@ export default function About(): ReactNode {
         {/* Highlights */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>✨</span>
+            <Sparkles className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>Highlights</h2>
           </div>
           <hr className={styles.divider} />
           <div className={styles.highlightGrid}>
             {highlights.map((h, i) => (
               <div key={i} className={styles.highlightCard}>
-                <span className={styles.highlightEmoji}>{h.emoji}</span>
+                <h.icon className={styles.highlightEmoji} size={24} aria-hidden />
                 <p className={styles.highlightText}>{h.text}</p>
               </div>
             ))}
@@ -275,7 +288,7 @@ export default function About(): ReactNode {
         {/* Experience */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>💼</span>
+            <Briefcase className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>Experience 經歷</h2>
           </div>
           <hr className={styles.divider} />
@@ -293,7 +306,7 @@ export default function About(): ReactNode {
         {/* Education */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>🎓</span>
+            <GraduationCap className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>Education 學歷</h2>
           </div>
           <hr className={styles.divider} />
@@ -310,7 +323,7 @@ export default function About(): ReactNode {
         {/* Skills */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>🛠️</span>
+            <Wrench className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>Skills 技能</h2>
           </div>
           <hr className={styles.divider} />
@@ -326,7 +339,7 @@ export default function About(): ReactNode {
         {/* Contact */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionIcon}>📬</span>
+            <Send className={styles.sectionIcon} size={24} aria-hidden />
             <h2 className={styles.sectionTitle}>Contact 聯絡方式</h2>
           </div>
           <hr className={styles.divider} />

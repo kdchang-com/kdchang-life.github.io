@@ -390,9 +390,9 @@
 }
 
 .categoryIcon {
-  font-size: 2.8rem;
+  color: var(--ifm-color-primary);
   display: block;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .categoryTitle {

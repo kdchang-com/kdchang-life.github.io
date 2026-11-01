@@ -611,9 +611,9 @@ body {
 }
 
 .newsletterIcon {
-  font-size: 2.5rem;
+  color: var(--ifm-color-primary);
   display: block;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .newsletterTitle {
@@ -635,4 +635,59 @@ body {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--ifm-color-emphasis-200) !important;
+}
+
+/* ============================================
+   Support button (navbar + footer)
+   ============================================ */
+.support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.support-btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.support-btn--nav {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.support-btn--nav:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+}
+
+/* In the mobile sidebar, keep the button from stretching full width */
+.navbar-sidebar .support-btn--nav {
+  margin: 0.5rem 0.75rem;
+}
+
+.support-btn--footer {
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.support-btn--footer:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.footer-heart {
+  color: #e5594f;
+  vertical-align: -2px;
 }
