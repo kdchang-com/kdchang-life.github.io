@@ -347,11 +347,11 @@ export default function Projects(): ReactNode {
           >
             <Rocket size={16} aria-hidden /> 產品
           </a>
-          <a href="#tools" className={`${styles.tabBtn} ${styles.tabBtnTool}`}>
-            <Wrench size={16} aria-hidden /> 工具
-          </a>
           <a href="#games" className={`${styles.tabBtn} ${styles.tabBtnGame}`}>
             <Gamepad2 size={16} aria-hidden /> 遊戲
+          </a>
+          <a href="#tools" className={`${styles.tabBtn} ${styles.tabBtnTool}`}>
+            <Wrench size={16} aria-hidden /> 工具
           </a>
         </div>
       </div>
@@ -367,20 +367,20 @@ export default function Projects(): ReactNode {
           category="Product"
         />
         <ProjectSection
-          id="tools"
-          icon={Wrench}
-          title="工具 Tools"
-          subtitle="解決特定問題的工具、模板與自動化程式碼"
-          items={tools}
-          category="Tool"
-        />
-        <ProjectSection
           id="games"
           icon={Gamepad2}
           title="遊戲 Games"
           subtitle="出於有趣好玩而打造的互動遊戲體驗"
           items={games}
           category="Game"
+        />
+        <ProjectSection
+          id="tools"
+          icon={Wrench}
+          title="工具 Tools"
+          subtitle="解決特定問題的工具、模板與自動化程式碼"
+          items={tools}
+          category="Tool"
         />
       </div>
     </Layout>
