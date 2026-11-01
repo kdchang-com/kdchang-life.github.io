@@ -131,11 +131,40 @@ const tools: Project[] = [
 /* ── Game ─────────────────────────────────────────── */
 const games: Project[] = [
   {
-    emoji: "🎮",
-    title: "創業獨角獸計畫 - Startup Unicorn Plan",
-    desc: "一款模擬創業過程的瀏覽器小遊戲，玩家將扮演一位創業者，從零開始打造自己的新創公司，經歷產品開發、市場行銷、團隊管理等各種挑戰，最終目標是成為獨角獸企業！",
-    tags: ["Browser Game", "JavaScript"],
-    status: "wip",
+    emoji: "🧋",
+    image: "/img/projects/teabarstory.jpg",
+    title: "手搖飲物語 Tea Bar Story",
+    desc: "研發配方、招募店員、跟上每週的流行趨勢。五個店面各有一個挑戰週要達標，把一台夜市攤車做成全球排隊的手搖飲品牌。",
+    tags: ["Browser Game", "Management", "Roguelite"],
+    status: "live",
+    url: "https://www.teabarstory.com",
+  },
+  {
+    emoji: "🦄",
+    image: "/img/projects/waytounicorn.jpg",
+    title: "獨角獸物語 Way to Unicorn",
+    desc: "從爸媽家的車庫起步，開發產品、組建團隊、說服投資人，在現金燒光之前把公司做到估值 10 億美元。",
+    tags: ["Browser Game", "Startup", "Roguelite"],
+    status: "live",
+    url: "https://www.waytounicorn.com",
+  },
+  {
+    emoji: "🏛️",
+    image: "/img/projects/90daystocityhall.png",
+    title: "市政廳物語 90 Days to City Hall",
+    desc: "安排行程、組建競選團隊、決定競選路線，撐過突發事件，在開票夜拿下新港市。當選後解鎖四年任期的治理模式，還能挑戰連任。",
+    tags: ["Browser Game", "Election", "Roguelite"],
+    status: "live",
+    url: "https://www.90daystocityhall.com",
+  },
+  {
+    emoji: "⚾",
+    image: "/img/projects/nextbaseballace.png",
+    title: "王牌球探物語 Next Baseball Ace",
+    desc: "擔任職棒球團的新球探，跑遍全島球場看比賽、做測試、做家訪，撐過三次球探會議，在選秀會挑出下一位王牌。看得準不準，三年後才知道。",
+    tags: ["Browser Game", "Baseball", "Roguelite"],
+    status: "live",
+    url: "https://www.nextbaseballace.com",
   },
 ];
 
