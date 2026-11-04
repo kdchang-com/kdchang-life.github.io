@@ -160,12 +160,12 @@ const games: Project[] = [
   },
   {
     icon: Rocket,
-    image: "/img/projects/waytounicorn.jpg",
-    title: "獨角獸物語 Way to Unicorn",
+    image: "/img/projects/garagetounicorn.jpg",
+    title: "車庫獨角獸物語 Garage to Unicorn",
     desc: "從爸媽家的車庫起步，開發產品、組建團隊、說服投資人，在現金燒光之前把公司做到估值 10 億美元。",
     tags: ["Browser Game", "Startup", "Roguelite"],
     status: "live",
-    url: "https://www.waytounicorn.com",
+    url: "https://www.garagetounicorn.com",
   },
   {
     icon: Landmark,
